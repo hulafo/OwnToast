@@ -6,7 +6,7 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-// import android.widget.Toast;
+import android.widget.Toast;
 /**
  * This class echoes a string called from JavaScript.
  */
@@ -26,7 +26,7 @@ public class OwnToast extends CordovaPlugin {
         if (message != null && message.length() > 0) {
             callbackContext.success(message);
         } else {
-            Toast.makeText(webView.getContext(), message, Toast.LENGTH_LONG).show();
+            Toast.makeText(webView.getContext(), message,Toast.LENGTH_LONG).show();
             callbackContext.success(message);
         }
     }
